@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orders | AB Furniture</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<aside class="sidebar">
+
+<h2>AB Furniture</h2>
+
+<ul>
+
+<li><a href="dashboard.html">
+<i class="fa-solid fa-gauge"></i>
+Dashboard
+</a></li>
+
+<li><a href="products.html">
+<i class="fa-solid fa-box"></i>
+Products
+</a></li>
+
+<li><a href="categories.html">
+<i class="fa-solid fa-layer-group"></i>
+Categories
+</a></li>
+
+<li><a href="orders.html" class="active">
+<i class="fa-solid fa-cart-shopping"></i>
+Orders
+</a></li>
+
+<li><a href="customers.html">
+<i class="fa-solid fa-users"></i>
+Customers
+</a></li>
+
+<li><a href="inventory.html">
+<i class="fa-solid fa-warehouse"></i>
+Inventory
+</a></li>
+
+<li><a href="sales-report.html">
+<i class="fa-solid fa-chart-line"></i>
+Sales Report
+</a></li>
+
+<li><a href="accounting.html">
+<i class="fa-solid fa-book"></i>
+Accounting
+</a></li>
+
+<li><a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a></li>
+
+</ul>
+
+</aside>
+
+<main class="dashboard">
+
+<h1>Orders Management</h1>
+  <div class="form-grid">
+
+<input type="text" id="customer" placeholder="Customer Name">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<select id="product"></select>
+
+<input type="number" id="qty" placeholder="Quantity">
+
+<input type="number" id="advance" placeholder="Advance Payment">
+
+<select id="status">
+<option>Pending</option>
+<option>Processing</option>
+<option>Delivered</option>
+</select>
+
+<button id="saveOrder">Save Order</button>
+
+  </div>
+<!-- Search & Filter -->
+
+<div class="top-bar">
+
+<input
+type="text"
+id="searchOrder"
+placeholder="Search by Customer or Order ID">
+
+<select id="statusFilter">
+<option value="All">All Orders</option>
+<option value="Pending">Pending</option>
+<option value="Processing">Processing</option>
+<option value="Delivered">Delivered</option>
+<option value="Cancelled">Cancelled</option>
+</select>
+
+</div>
+
+<!-- Orders Table -->
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Customer</th>
+
+<th>Phone</th>
+
+<th>Product</th>
+
+<th>Qty</th>
+
+<th>Total</th>
+
+<th>Status</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="ordersTable">
+
+<tr>
+
+<td>#1001</td>
+
+<td>Ram Sharma</td>
+
+<td>9800000001</td>
+
+<td>Luxury Sofa</td>
+
+<td>1</td>
+
+<td>Rs.49,500</td>
+
+<td><span class="pending">Pending</span></td>
+
+<td>25 Jul 2026</td>
+
+<td>
+
+<button class="edit-btn">
+<i class="fa-solid fa-pen"></i>
+</button>
+
+<button class="delete-btn">
+<i class="fa-solid fa-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1002</td>
+
+<td>Sita Karki</td>
+
+<td>9800000002</td>
+
+<td>Office Chair</td>
+
+<td>2</td>
+
+<td>Rs.20,400</td>
+
+<td><span class="processing">Processing</span></td>
+
+<td>25 Jul 2026</td>
+
+<td>
+
+<button class="edit-btn">
+<i class="fa-solid fa-pen"></i>
+</button>
+
+<button class="delete-btn">
+<i class="fa-solid fa-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>#1003</td>
+
+<td>Hari Bista</td>
+
+<td>9800000003</td>
+
+<td>Wooden Bed</td>
+
+<td>1</td>
+
+<td>Rs.36,000</td>
+
+<td><span class="delivered">Delivered</span></td>
+
+<td>25 Jul 2026</td>
+
+<td>
+
+<button class="edit-btn">
+<i class="fa-solid fa-pen"></i>
+</button>
+
+<button class="delete-btn">
+<i class="fa-solid fa-trash"></i>
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div><!-- Order Summary -->
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-cart-shopping"></i>
+<h3>Total Orders</h3>
+<h2 id="totalOrders">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-hourglass-half"></i>
+<h3>Pending Orders</h3>
+<h2 id="pendingOrders">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-truck"></i>
+<h3>Delivered</h3>
+<h2 id="deliveredOrders">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-sack-dollar"></i>
+<h3>Total Sales</h3>
+<h2 id="totalSales">Rs. 0</h2>
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+
+<script src="../js/orders.js"></script>
+</body>
+
+</html>

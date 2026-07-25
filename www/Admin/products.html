@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products | AB Furniture</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<aside class="sidebar">
+
+<h2>AB Furniture</h2>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+
+<li><a href="products.html"><i class="fa-solid fa-box"></i> Products</a></li>
+
+<li><a href="categories.html"><i class="fa-solid fa-layer-group"></i> Categories</a></li>
+
+<li><a href="orders.html"><i class="fa-solid fa-cart-shopping"></i> Orders</a></li>
+
+<li><a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a></li>
+
+<li><a href="inventory.html"><i class="fa-solid fa-warehouse"></i> Inventory</a></li>
+
+<li><a href="sales-report.html"><i class="fa-solid fa-chart-line"></i> Sales Report</a></li>
+
+<li><a href="accounting.html"><i class="fa-solid fa-book"></i> Accounting</a></li>
+
+<li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+
+</ul>
+
+</aside>
+
+<main class="dashboard">
+
+<h1>Products Management</h1>
+
+<div class="form-container">
+
+<h2>Add New Product</h2>
+
+<form id="productForm">
+
+<div class="form-group">
+
+<label>Product Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter product name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Category</label>
+
+<select id="category">
+
+<option>Sofa</option>
+
+<option>Chair</option>
+
+<option>Bed</option>
+
+<option>Table</option>
+
+<option>Cupboard</option>
+
+<option>Office Furniture</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Stock</label>
+
+<input
+type="number"
+id="stock"
+placeholder="Stock">
+
+</div><div class="form-group">
+
+<label>Cost Price (Rs.)</label>
+
+<input
+type="number"
+id="costPrice"
+placeholder="Enter cost price"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Selling Price (Rs.)</label>
+
+<input
+type="number"
+id="sellingPrice"
+placeholder="Enter selling price"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Discount (%)</label>
+
+<input
+type="number"
+id="discount"
+placeholder="0">
+
+</div>
+
+<div class="form-group">
+
+<label>Product Image</label>
+
+<input
+type="file"
+id="image"
+accept="image/*">
+
+</div>
+
+<div class="form-group">
+
+<label>Description</label>
+
+<textarea
+id="description"
+rows="5"
+placeholder="Enter product description"></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>Status</label>
+
+<select id="status">
+
+<option value="Available">Available</option>
+
+<option value="Out of Stock">Out of Stock</option>
+
+<option value="Coming Soon">Coming Soon</option>
+
+</select>
+
+</div>
+
+<button
+type="submit"
+class="save-btn">
+
+Save Product
+
+</button>
+
+</form>
+
+</div>
+
+<hr>
+
+<h2>All Products</h2>
+
+<input
+type="text"
+id="search"
+placeholder="Search Products...">
+
+<br><br>
+
+<div class="table-box">
+
+<table id="productTable">
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Name</th>
+
+<th>Category</th>
+
+<th>Stock</th>
+
+<th>Cost</th>
+
+<th>Selling</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productBody">
+
+</tbody>
+
+</table>
+
+</div></main>
+
+</div>
+
+<script src="../js/products.js"></script>
+</body>
+
+</html>

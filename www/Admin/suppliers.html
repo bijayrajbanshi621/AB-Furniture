@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suppliers</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<aside class="sidebar">
+
+<h2>AB Furniture</h2>
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="products.html">📦 Products</a>
+
+<a href="inventory.html">🏪 Inventory</a>
+
+<a href="orders.html">🛒 Orders</a>
+
+<a href="manufacturing.html">🏭 Manufacturing</a>
+
+<a href="customers.html">👥 Customers</a>
+
+<a href="suppliers.html" class="active">🚚 Suppliers</a>
+
+<a href="purchase.html">🛍 Purchase</a>
+
+<a href="reports.html">📈 Reports</a>
+
+<a href="accounting.html">💰 Accounting</a>
+
+<a href="settings.html">⚙ Settings</a>
+
+</aside>
+
+<div class="main-content">
+
+<div class="top-bar">
+
+<h1>🚚 Suppliers</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Add Supplier</h2>
+
+<form id="supplierForm">
+
+<input type="text" id="supplierName" placeholder="Supplier Name" required>
+
+<input type="text" id="supplierPhone" placeholder="Phone Number" required>
+
+<input type="text" id="supplierAddress" placeholder="Address">
+
+<input type="text" id="supplierMaterial" placeholder="Material">
+
+<input type="number" id="supplierDue" placeholder="Opening Due">
+
+<button type="submit">
+
+Save Supplier
+
+</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Supplier List</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Phone</th>
+
+<th>Material</th>
+
+<th>Due</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="supplierBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="../js/suppliers.js"></script>
+
+</body>
+
+</html>

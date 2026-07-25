@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manufacturing</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<aside class="sidebar">
+
+<div class="logo">AB Furniture</div>
+
+<ul>
+
+<li><a href="dashboard.html">📊 Dashboard</a></li>
+
+<li><a href="products.html">📦 Products</a></li>
+
+<li><a href="inventory.html">🏪 Inventory</a></li>
+
+<li><a href="orders.html">🛒 Orders</a></li>
+
+<li class="active"><a href="manufacturing.html">🏭 Manufacturing</a></li>
+
+<li><a href="customers.html">👥 Customers</a></li>
+
+<li><a href="accounting.html">📒 Accounting</a></li>
+
+<li><a href="settings.html">⚙ Settings</a></li>
+
+</ul>
+
+</aside>
+
+<main class="dashboard">
+
+<div class="top-bar">
+
+<h1>🏭 Manufacturing</h1>
+
+</div>
+
+<div class="dashboard-section">
+
+<h2>Create Work Order</h2>
+
+<form id="workOrderForm">
+
+<label>Furniture Name</label>
+<input type="text" id="furnitureName" required>
+
+<label>Quantity</label>
+<input type="number" id="qty" required>
+
+<label>Plywood Sheets</label>
+<input type="number" id="plywood" required>
+
+<label>Laminate Sheets</label>
+<input type="number" id="laminate">
+
+<label>Edge Band (Meter)</label>
+<input type="number" id="edgeBand">
+
+<label>Handles</label>
+<input type="number" id="handles">
+
+<label>Hinges</label>
+<input type="number" id="hinges">
+
+<label>Screws</label>
+<input type="number" id="screws">
+
+<label>Glue Cost</label>
+<input type="number" id="glue">
+
+<label>Labour Cost</label>
+<input type="number" id="labour">
+
+<label>Other Cost</label>
+<input type="number" id="otherCost">
+
+<button type="submit">
+
+Save Work Order
+
+</button>
+
+</form>
+<hr style="margin:30px 0;">
+
+<h2>Saved Work Orders</h2>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Date</th>
+<th>Furniture</th>
+<th>Qty</th>
+<th>Plywood</th>
+<th>Labour</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="workOrderBody">
+
+</tbody>
+
+</table>
+
+</div>
+</div></main>
+
+</div>
+
+<script src="../js/manufacturing.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customer Details</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<aside class="sidebar">
+
+<div class="logo">AB Furniture</div>
+
+<ul>
+
+<li><a href="dashboard.html">📊 Dashboard</a></li>
+
+<li><a href="products.html">📦 Products</a></li>
+
+<li><a href="inventory.html">🏪 Inventory</a></li>
+
+<li><a href="orders.html">🛒 Orders</a></li>
+
+<li class="active"><a href="customers.html">👥 Customers</a></li>
+
+<li><a href="accounting.html">📒 Accounting</a></li>
+
+<li><a href="settings.html">⚙ Settings</a></li>
+
+</ul>
+
+</aside>
+
+<main class="dashboard">
+
+<div class="top-bar">
+
+<h1>👤 Customer Details</h1>
+
+</div>
+
+<div class="dashboard-section">
+
+<h2 id="customerName">Customer</h2>
+
+<p id="customerPhone"></p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Orders</h3>
+<h2 id="customerOrders">0</h2>
+</div>
+
+<div class="card">
+<h3>Total Purchase</h3>
+<h2 id="customerPurchase">Rs. 0</h2>
+</div>
+
+</div>
+
+<h2 style="margin-top:30px;">Order History</h2>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+<th>Product</th>
+<th>Qty</th>
+<th>Total</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+</main>
+
+</div>
+
+<script src="../js/customer-details.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice | AB Furniture</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<style>
+
+.invoice{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.invoice-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:30px;
+}
+
+.invoice table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.invoice table th,
+.invoice table td{
+border:1px solid #ddd;
+padding:10px;
+text-align:left;
+}
+
+.total{
+text-align:right;
+font-size:22px;
+margin-top:20px;
+font-weight:bold;
+}
+
+.btns{
+margin-top:30px;
+display:flex;
+gap:10px;
+}
+.payment-summary{
+    margin-top:25px;
+    text-align:right;
+    line-height:2;
+    font-size:18px;
+}
+
+.signature{
+    display:flex;
+    justify-content:space-between;
+    margin-top:80px;
+    font-weight:bold;
+  }
+</style>
+
+</head>
+
+<body>
+
+<div class="invoice">
+
+<div class="invoice-header">
+
+<div>
+<h1>AB Furniture</h1>
+<p>Dhangadhi, Nepal</p>
+<p>Phone: 98XXXXXXXX</p>
+</div>
+
+<div>
+<h2>INVOICE</h2>
+
+<p>
+Invoice No :
+<span id="invoiceNo"></span>
+</p>
+
+<p>
+Date :
+<span id="invoiceDate"></span>
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<h3>Customer Details</h3>
+
+<p id="customerName"></p>
+
+<p id="customerPhone"></p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+
+<th>Qty</th>
+
+<th>Price</th>
+
+<th>Total</th>
+
+</tr>
+
+</thead>
+
+<tbody id="invoiceBody">
+
+</tbody>
+
+</table>
+  <hr>
+
+<div class="payment-summary">
+
+<p>
+Subtotal :
+<span id="subTotal">Rs. 0</span>
+</p>
+
+<p>
+Discount :
+<span id="discount">Rs. 0</span>
+</p>
+
+<p>
+Advance Paid :
+<span id="advancePaid">Rs. 0</span>
+</p>
+
+<p>
+Remaining Balance :
+<span id="balanceDue">Rs. 0</span>
+</p>
+
+<h2>
+Grand Total :
+<span id="grandTotal">Rs. 0</span>
+</h2>
+
+</div>
+
+<br>
+
+<div class="signature">
+
+<div>
+____________________
+<br>
+Customer Signature
+</div>
+
+<div>
+____________________
+<br>
+Authorized Signature
+</div>
+
+</div>
+
+<div class="total">
+
+Grand Total :
+<span id="grandTotal"></span>
+
+</div>
+
+<div class="btns">
+
+<button onclick="window.print()">
+
+Print Invoice
+
+</button>
+
+</div>
+
+</div>
+
+<script src="../js/invoice.js"></script>
+
+</body>
+</html>

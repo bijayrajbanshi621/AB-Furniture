@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AB Furniture Admin Dashboard</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+AB Furniture
+
+</div>
+
+<ul>
+
+<li class="active">
+<a href="dashboard.html">
+<i class="fa-solid fa-gauge"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="products.html">
+<i class="fa-solid fa-box"></i>
+Products
+</a>
+</li>
+
+<li>
+<a href="inventory.html">
+<i class="fa-solid fa-warehouse"></i>
+Inventory
+</a>
+</li>
+
+<li>
+<a href="orders.html">
+<i class="fa-solid fa-cart-shopping"></i>
+Orders
+</a>
+</li>
+<li>
+    <a href="manufacturing.html">
+        <i class="fa-solid fa-industry"></i>
+        Manufacturing
+    </a>
+</li>
+<li>
+<a href="customers.html">
+<i class="fa-solid fa-users"></i>
+Customers
+</a>
+</li>
+<a href="suppliers.html">🚚 Suppliers</a>
+
+<a href="purchase.html">🛍 Purchase</a>
+<li>
+<a href="accounting.html">
+<i class="fa-solid fa-book"></i>
+Accounting
+</a>
+</li>
+
+<li>
+<a href="sales-report.html">
+<i class="fa-solid fa-chart-line"></i>
+Sales Report
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main Dashboard -->
+
+<main class="dashboard">
+
+<div class="top-bar">
+
+<h1>📊 Dashboard</h1>
+
+<div style="display:flex;align-items:center;gap:20px;">
+
+<div class="search-box">
+
+<input type="text"
+placeholder="Search...">
+
+</div>
+
+<i class="fa-solid fa-bell"></i>
+
+<div class="profile">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Admin</span>
+
+</div>
+
+</div>
+
+</div>
+<!-- Dashboard Cards -->
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-sack-dollar"></i>
+<h3>Total Sales</h3>
+<h2 id="totalSales">Rs. 0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-cart-shopping"></i>
+<h3>Total Orders</h3>
+<h2 id="totalOrders">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-box-open"></i>
+<h3>Total Products</h3>
+<h2 id="totalProducts">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-users"></i>
+<h3>Total Customers</h3>
+<h2 id="totalCustomers">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-boxes-stacked"></i>
+<h3>Total Stock</h3>
+<h2 id="totalStock">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-triangle-exclamation"></i>
+<h3>Low Stock</h3>
+<h2 id="lowStock">0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-money-bill-trend-up"></i>
+<h3>Monthly Income</h3>
+<h2 id="monthlyIncome">Rs. 0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Today's Sales</h3>
+<h2 id="todaySales">Rs. 0</h2>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-percent"></i>
+<h3>Total Profit</h3>
+<h2 id="totalProfit">Rs. 0</h2>
+</div>
+
+</div>
+
+<!-- Quick Actions -->
+
+<div class="dashboard-section">
+
+<h2>Quick Actions</h2>
+
+<div class="action-grid">
+
+<a href="products.html">
+<button>Add Product</button>
+</a>
+
+<a href="inventory.html">
+<button>Update Stock</button>
+</a>
+
+<a href="orders.html">
+<button>Manage Orders</button>
+</a>
+
+<a href="customers.html">
+<button>Customers</button>
+</a>
+
+<a href="accounting.html">
+<button>Accounting</button>
+</a>
+
+<a href="sales-report.html">
+<button>Sales Report</button>
+</a>
+
+</div>
+
+</div>
+<!-- Recent Orders -->
+
+<div class="dashboard-section">
+
+<h2>Recent Orders</h2>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+<tr>
+<th>Order ID</th>
+<th>Customer</th>
+<th>Product</th>
+<th>Qty</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="recentOrdersBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- Low Stock -->
+
+<div class="dashboard-section">
+
+<h2>Low Stock Alert</h2>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+<th>Available</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="lowStockBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+
+<footer class="admin-footer">
+
+<p>© 2026 AB Furniture | All Rights Reserved</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
